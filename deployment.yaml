@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: pod
+metadata:
+  name: myapp
+  labels:
+    name: myapp
+spec:
+  containers:
+  - name: myapp
+    image: 538284647434.dkr.ecr.ap-south-1.amazonaws.com/temp-repo:latest
+    resources:
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+    ports:
+      - containerPort: 5000
